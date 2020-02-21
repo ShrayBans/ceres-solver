@@ -35,6 +35,7 @@
 #include <stdio.h>
 #include <string.h>  // For NULL
 #include "ceres/c_api.h"
+#include "emscripten.h"
 
 /* Data generated using the following octave code.
  *
@@ -146,6 +147,7 @@ static int exponential_residual(void* user_data,
   return 1;
 }
 
+EMSCRIPTEN_KEEPALIVE
 int main(int argc, char** argv) {
   /* Note: Typically it is better to compact m and c into one block,
    * but in this case use separate blocks to illustrate the use of

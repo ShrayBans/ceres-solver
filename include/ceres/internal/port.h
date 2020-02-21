@@ -34,6 +34,8 @@
 // This file needs to compile as c code.
 #include "ceres/internal/config.h"
 
+#define CERES_USE_CXX11_THREADS
+
 #if defined(CERES_USE_OPENMP)
 #  if defined(CERES_USE_CXX11_THREADS) || defined(CERES_NO_THREADS)
 #    error CERES_USE_OPENMP is mutually exclusive to CERES_USE_CXX11_THREADS and CERES_NO_THREADS
